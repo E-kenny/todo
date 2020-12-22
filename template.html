@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            th, td{
+    border:1px solid silver;
+}
+table{
+    width:100%;
+}
+a{
+    text-decoration: none;
+    background-color: blue;
+            color: white;
+}
+td{
+    text-align: center;
+}
+td:hover{
+    background-color: grey;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>E_kenny's Todo App</h1>
+   
+   
+    <a href="http://127.0.0.1:8080/create">Form</a>
+
+            <table >
+                <tr>
+                    <th>
+                        S/N
+                    </th>
+                    <th>
+                        Activity
+                    </th>
+                    <th>
+                        Time
+                    </th>
+                </tr>
+                {{range . }}
+
+                <tr>
+                    <td>{{.ID}}</td>
+                    <td>{{.Activity}}</td>
+                    <td>{{.Time}}</td>
+                   
+                    <td><a href="http://127.0.0.1:8080/update/{{.ID}}">UPDATE</a></td>
+                    
+                    <td><a href="http://127.0.0.1:8080/delete/{{.ID}}">DELETE</a></td>
+                    
+                </tr>
+         
+        {{end}}
+    </table>
+</body>
+</html>

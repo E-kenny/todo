@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      form{
+            width: 65%;
+            margin: auto;
+            background-color: skyblue;
+        }
+        input{
+            width: 97%;
+            margin: auto;
+
+        }
+        button{
+            background-color: black;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update Todo</h1>
+    <form action="/update/{{.}}" method="POST">
+        <label>Activity <br><input type="text" name="activity" ></label> <br><br>
+        <Label>Time <br><input type="text" name="time" id=""></Label><br><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
